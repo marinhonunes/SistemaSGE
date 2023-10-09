@@ -1,0 +1,34 @@
+{
+  "name": "sistemasge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinhonunes/SistemaSGE.git"
+  },
+  "keywords": [
+    "node.js",
+    "http",
+    "html",
+    "css",
+    "javascript",
+    "bootstrap"
+  ],
+  "author": "Mario, Mariane, Luiz, Pedro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marinhonunes/SistemaSGE/issues"
+  },
+  "homepage": "https://github.com/marinhonunes/SistemaSGE#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.1"
+  }
+}
