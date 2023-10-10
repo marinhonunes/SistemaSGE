@@ -3,12 +3,12 @@ import LivroCtrl from "../controle/livroctrl.js";
 
 const rotaLivro = Router();
 
-const LivroCtrl = new LivroCtrl();
+const Livroct = new LivroCtrl();
 
-rotaAluno.get('/:termo', LivroCtrl.consultar)
-.get('/', LivroCtrl.consultar)
-.post('/', LivroCtrl.gravar)
-.put('/', LivroCtrl.atualizar)
-.delete('/',LivroCtrl.excluir);
+rotaAluno.get('/:termo', Livroct.consultar)
+.get('/', Livroct.consultar)
+.post('/', Livroct.gravar)
+.put('/', Livroct.atualizar)
+.delete('/',Livroct.excluir);
 
 export default rotaLivro;
