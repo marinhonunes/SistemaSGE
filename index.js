@@ -2,8 +2,8 @@ import express from 'express';
 import session from 'express-session';
 import autenticar from './seguranca/autenticacao.js';
 import rotalogin from './rotas/rotalogin.js';
-//rota aluno
-//rota professor
+import rotaLivro from './Backend/rotas/rotalivro.js';
+//rota projeto
 
 const host = '0.0.0.0';
 
@@ -25,7 +25,7 @@ app.use(session({
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.static('./publico'));
-// app.use('/alunos', rotaAluno);
+app.use('/livros', rotaLivro);
 app.use('/login', rotalogin); 
 app.use(autenticar, express.static('./protegido'));
 
