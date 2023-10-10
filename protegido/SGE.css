@@ -14,7 +14,9 @@ body {
     display: flex;
     background-color: #ccc
 }
-
+a {
+    cursor: pointer;
+    }
 .sidebar {
     position: sticky;
     top: 0;
@@ -85,7 +87,7 @@ body {
 
 .main--content{
     position: relative;
-    background: #ebe9e9;
+    background: #4d4e4e;
     width: 100%;
     padding: 1rem;
 }
@@ -95,7 +97,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: #fff;
+    background: #034d57;
     border-radius: 10px;
     padding: 10px 2rem;
     margin-bottom: 1rem;
@@ -103,7 +105,7 @@ body {
 
 
 .header--title {
-    color: rgb(9, 111, 123);
+    color: rgb(255, 255, 255);
     margin: 0 20px;
 }
 
