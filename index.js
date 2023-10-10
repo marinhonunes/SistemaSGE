@@ -26,9 +26,20 @@ app.use(session({
 app.use(express.urlencoded({extended: false}));
 app.use(express.static('./publico'));
 // app.use('/alunos', rotaAluno);
-app.use('/login', rotalogin);
+app.use('/login', rotalogin); 
 app.use(autenticar, express.static('./protegido'));
 
+app.get('/CadastroLivro', (requisicao, resposta) => {
+    res.sendFile(__dirname + '/protegido/CadastroLivro.html'); //livro
+  });
+
+app.get('/CadastroProjeto', (requisicao, resposta) => {
+    res.sendFile(__dirname + '/protegido/CadastroProjeto.html'); //projeto
+});
+
+app.get('/menuSGE', (requisicao, resposta) => {
+    res.sendFile(__dirname + '/protegido/menuSGE.html'); //menu
+});
 
 app.listen(porta, host, () =>{
     console.log('Servidor escutando em', host, porta);

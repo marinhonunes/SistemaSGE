@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>SGE</title>
+    <link rel="stylesheet" href="SGE.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- MENU INICIO -->
+
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+
+            <li class="active">
+                <a onclick="cdmenu()">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Cadastros</span>
+                </a>
+            </li>
+
+            <li>
+                <a onclick="cdprojeto()">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+
+            <li>
+                <a onclick="cdlivro()">
+                    <i class="fas fa-book"></i>
+                    <span>Livros</span>
+                </a>
+            </li>
+
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Voltar</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MENU INICIO -->
+
+    <div class="main--content">
+
+    <!-- TITULO INICIO -->
+
+    <div class="header--wrapper">
+        <div class="header--title">
+            <img src="sge.png" alt="Livro" class="header-icon"> 
+            <h2> Sistema de Gerenciamento Escolar - SGE </h2>
+        </div>
+    </div>
+    
+    <!-- TITULO FIM -->
+
+    <!-- SCRIPTS -->
+
+    <script src="./scripts/scripts.js"></script>

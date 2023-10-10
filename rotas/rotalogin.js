@@ -12,7 +12,7 @@ rotalogin
     const senha = requisicao.body.senha;
     if (usuario === 'sge' && senha === '123'){
         requisicao.session.usuarioLogado = true;
-        resposta.redirect('/menu.html');
+        resposta.redirect('/menuSGE.html');
     }
     else{
         resposta.send("<p>Usuário ou Senha inválida</p> <button onclick='history.back()'> Tentar novamente</button>");

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>SGE</title>
+    <link rel="stylesheet" href="SGE.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS do Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- MENU INICIO -->
+
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+
+            <li class="active">
+                <a onclick="cdmenu()">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Cadastros</span>
+                </a>
+            </li>
+
+            <li>
+                <a onclick="cdprojeto()">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Projetos</span>
+                </a>
+            </li>
+
+            <li>
+                <a onclick="cdlivro()">
+                    <i class="fas fa-book"></i>
+                    <span>Livros</span>
+                </a>
+            </li>
+
+            <li class="logout">
+                <a href="#">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Voltar</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MENU INICIO -->
+
+    <div class="main--content">
+
+    <!-- TITULO INICIO -->
+
+    <div class="header--wrapper">
+        <div class="header--title">
+            <img src="sge.png" alt="Livro" class="header-icon"> 
+            <h2> Sistema de Gerenciamento Escolar - SGE </h2>
+        </div>
+    </div>
+    
+    <!-- TITULO FIM -->
+
+    <!-- FORMULARIO INICIO -->
+
+        <div class="content-section" id="responsavel-section">
+            <form id="formulario" name="cadastroLivros" onsubmit="return validarFormulario()" action="#" method="POST">
+                <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s" style="background-color: #EAF1FB;">
+                        <div class="container py-5">
+
+                            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">  
+                                <h2 class="fw-bold text-uppercase">CADASTRO DE LIVROS</h2>
+                                <i class="fas fa-book-open fa-2x"></i>
+                                </br></br>
+                                <h3 class="mb-0">Adicione novos livros à sua biblioteca!</h3>
+                            </div>
+                            
+                            
+                            <!-- Primeira linha inicio -->
+                            <div class="row">
+
+                                <div class="col">
+                                    <label for="isbn">
+                                        <strong>ISBN:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="text" id="isbn" placeholder="ISBN" required="required">
+                                    <div class="invalid-feedback">Por favor, informe o ISBN do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="titulo">
+                                        <strong>Título do Livro:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="text" id="titulo" placeholder="Título do Livro" required="required">
+                                    <div class="invalid-feedback">Por favor, informe o título do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="autor">
+                                        <strong>Autor(es):</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="text" id="autor" placeholder="Autor(es)" required="required">
+                                    <div class="invalid-feedback">Por favor, informe o autor ou autores do livro.</div>
+                                </div>
+
+                            </div>
+                            <!-- Primeira linha fim -->
+
+                            <!-- Segunda linha inicio -->
+                            <div class="row mt-3">
+
+                                <div class="col">
+                                    <label for="editora">
+                                        <strong>Editora:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="text" id="editora" placeholder="Editora" required="required">
+                                    <div class="invalid-feedback">Por favor, informe a editora do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="anoPublicacao">
+                                        <strong>Ano de Publicação:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="text" id="anoPublicacao" placeholder="Ano de Publicação" required="required">
+                                    <div class="invalid-feedback">Por favor, informe o ano de publicação do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="edicao">
+                                        <strong>Edição:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="number" id="edicao" placeholder="Edição" required="required">
+                                    <div class="invalid-feedback">Por favor, informe a edição do livro.</div>
+                                </div>
+
+                            </div>
+                            <!-- Segunda linha fim -->
+        
+                            <!-- Terceira linha inicio -->
+                            <div class="row mt-3">
+
+                                <div class="col">
+                                    <label for="numPaginas">
+                                        <strong>Número de Páginas:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="number" id="numPaginas" placeholder="Número de Páginas" required="required">
+                                    <div class="invalid-feedback">Por favor, informe o número de páginas do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="genero">
+                                        <strong>Gênero:</strong>
+                                    </label>
+                                    <select class="form-control form-control-lg bg-white" id="genero" required="required">
+                                        <option value="" selected disabled>Selecione o Gênero Literário</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="ficcao">Ficção Científica</option>
+                                        <option value="historia">História</option>
+                                        <option value="biografia">Biografia</option>
+                                        <!-- Adicione mais opções conforme necessário -->
+                                    </select>
+                                    <div class="invalid-feedback">Por favor, selecione o gênero do livro.</div>
+                                </div>
+
+                                <div class="col">
+                                    <label for="dataEntrada">
+                                        <strong>Data de Entrada:</strong>
+                                    </label>
+                                    <input class="form-control form-control-lg" type="date" id="dataEntrada" required="required">
+                                    <div class="invalid-feedback">Por favor, informe a data de entrada do livro na biblioteca.</div>
+                                </div>
+
+                            </div>
+                            <!-- Terceira linha fim -->
+
+                        </br></br> 
+
+                        <!-- Botões inicio -->
+                        <div class="d-flex justify-content-center">
+
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" type="reset">LIMPAR</button>
+                            </div>
+
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="submitButton" type="button">FINALIZAR CADASTRO</button>
+                            </div>
+
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="atualizar" type="button" disabled>ATUALIZAR</button>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="excluir" type="button" disabled>EXCLUIR</button>
+                            </div>
+
+                        </div>
+                        <!-- Botões inicio -->
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap e Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- SCRIPTS -->
+
+    <script src="./scripts/scripts.js"></script>
+
+</body>
+
+</html>
