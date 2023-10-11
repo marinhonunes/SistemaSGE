@@ -14,6 +14,7 @@
 <body>
 
     <!-- MENU INICIO -->
+    <header>
 
     <div class="sidebar">
         <div class="logo"></div>
@@ -49,12 +50,13 @@
         </ul>
     </div>
 
-    <!-- MENU INICIO -->
+    </header>
+    <!-- MENU FIM -->
 
     <div class="main--content">
 
     <!-- TITULO INICIO -->
-
+    <aside>
     <div class="header--wrapper">
         <div class="header--title">
             <img src="sge.png" alt="Livro" class="header-icon"> 
@@ -65,7 +67,6 @@
     <!-- TITULO FIM -->
 
     <!-- FORMULARIO INICIO -->
-
         <div class="content-section" id="responsavel-section">
             <form id="formulario" name="cadastroLivros" onsubmit="return validarFormulario()" action="#" method="POST">
                 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s" style="background-color: #EAF1FB;">
@@ -203,8 +204,16 @@
                     </div>
                 </div>
             </form>
+
+            </br> <div id = "mensagem"> </div>
+            </br> <div id = "espacoTabela"> </div>
+
         </div>
+
     </div>
+
+    </aside>
+    <!-- FORMULARIO FIM -->
 
     <!-- Scripts do Bootstrap e Popper.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -212,7 +221,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <!-- SCRIPTS -->
-
     <script src="./scripts/scripts.js"></script>
 
 </body>

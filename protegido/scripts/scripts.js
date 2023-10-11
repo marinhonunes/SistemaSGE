@@ -52,7 +52,7 @@ botaoCadastrar.onclick = () => {
 };
 
 window.onload = () => {
-    obterLivros();
+    obterLivros([]);
 };
 
 document.getElementById("excluir").onclick = excluirLivro;
@@ -63,6 +63,7 @@ function mostrarMensagem(mensagem, tipo) {
     divMensagem.innerHTML = `<div class="alert alert-${tipo}" role="alert">
                                 ${mensagem}
                             </div>`;
+
     setTimeout(() => {
         divMensagem.innerHTML = '';
     }, 5000);
@@ -122,7 +123,7 @@ function mostrarLivros(listaLivros) {
     if (listaLivros.length > 0) {
         elementoDivTabela.innerHTML = '';
         let tabela = document.createElement('table');
-        tabela.className = 'table table-striped table-hover';
+        tabela.className = 'table table-primary table-hover';
         let cabecalhoTabela = document.createElement('thead');
         let corpoTabela = document.createElement('tbody');
         cabecalhoTabela.innerHTML = `<tr>
@@ -150,14 +151,14 @@ function mostrarLivros(listaLivros) {
                                  <td>${livro.numPaginas}</td>
                                  <td>${livro.genero}</td>
                                  <td>${livro.dataEntrada}</td>
-                                 <td><button type="button" class="btn btn-warning" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
-    <button type="button" class="btn btn-danger" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </td>`;
+                                 <td><button type="button" class="btn btn-primary" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
+    <button type="button" class="btn btn-primary" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </td>`;
             corpoTabela.appendChild(linhaTabela);
         }
         tabela.appendChild(corpoTabela);
         elementoDivTabela.appendChild(tabela);
     } else {
-        elementoDivTabela.innerHTML = `<div class="alert alert-warning" role="alert">
+        elementoDivTabela.innerHTML = `<div class="alert alert-info" role="alert">
                                             Nenhum livro cadastrado!
                                         </div>`;
     }
