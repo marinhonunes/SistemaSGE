@@ -8,9 +8,9 @@ export default async function conectar (){
     global.poolConexoes = mysql.createPool({
         host: 'localhost',
         port: 3306,
-        database: 'backendaluno15-ppiadsead', //alterar
-        user: 'aluno15-ppiadsead', //alterar
-        password: 'UwMkBVwYnPLc5VHx1HHH', //alterar
+        database: 'backend-sge',
+        user: 'sge',
+        password: 'Tg4rxf3l0NAbPyK0MY65',
         waitForConnections: true,
         connectionLimit: 10,
         queueLimit: 0,
