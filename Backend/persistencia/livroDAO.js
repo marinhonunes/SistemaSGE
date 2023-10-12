@@ -1,5 +1,5 @@
 import Livro from '../modelo/livro.js';
-import conectar from './conectBanco.js';
+import conectar from './conexao.js';
 
 export default class LivroDAO {
     async gravar(livro) {

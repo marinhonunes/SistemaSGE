@@ -5,7 +5,7 @@ const rotaLivro = Router();
 
 const Livroct = new LivroCtrl();
 
-rotaAluno.get('/:termo', Livroct.consultar)
+rotaLivro.get('/:termo', Livroct.consultar)
 .get('/', Livroct.consultar)
 .post('/', Livroct.gravar)
 .put('/', Livroct.atualizar)
