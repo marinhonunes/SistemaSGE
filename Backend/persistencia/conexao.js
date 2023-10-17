@@ -1,24 +1,16 @@
 import mysql from 'mysql2/promise';
-export default async function conectar (){
-    
-    if (global.poolConexoes){
+
+export default async function conectar(){
+    if(global.poolConexoes){
         return await global.poolConexoes.getConnection();
     }
-
+    
     global.poolConexoes = mysql.createPool({
-        host: 'localhost',
-        port: 3306,
-        database: 'backend-sge',
-        user: 'sge',
-        password: 'Tg4rxf3l0NAbPyK0MY65',
-        waitForConnections: true,
-        connectionLimit: 10,
-        queueLimit: 0,
-        idleTimeout: 60000,
-        enableKeepAlive: true,
-        keepAliveInitialDelay: 0
-    })
-
+        host:"localhost",
+        user:"root",
+        password:"",
+        database:"sge"
+    });
+    
     return await global.poolConexoes.getConnection();
-
 }

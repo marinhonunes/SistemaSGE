@@ -10,7 +10,7 @@ function cdmenu(){
     window.location.href = '/menuSGE.html'
 }
 
-const endpoint = "https://129.146.68.51/sge/livros"; // Alterar para a URL correta
+const endpoint = "http://localhost:3214/livros"; // Alterar para a URL correta
 const botaoCadastrar = document.getElementById('submitButton'); 
 const formulario = document.getElementById('formulario'); 
 

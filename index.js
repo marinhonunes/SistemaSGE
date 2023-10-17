@@ -7,7 +7,7 @@ import rotaLivro from './Backend/rotas/rotalivro.js';
 
 const host = '0.0.0.0';
 
-const porta = 3000;
+const porta = 3214;
 
 const app = express();
 
