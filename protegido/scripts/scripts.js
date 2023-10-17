@@ -164,8 +164,17 @@ function mostrarLivros(listaLivros) {
     }
 }
 
+function formatISODateToInputDate(isoDate) {
+    const date = new Date(isoDate);
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0'); 
+    const day = String(date.getUTCDate()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}`;
+}
+
 function prepararTela(isbn = "", titulo = "", autor = "", editora = "", anoPublicacao = "", edicao = "", numPaginas = "", genero = "", dataEntrada = "", acao = "") {
-    let botaoCadastrar = document.getElementById("cadastrarLivro");
+    let botaoCadastrar = document.getElementById("submitButton");
     let botaoAtualizar = document.getElementById("atualizar");
     let botaoExcluir = document.getElementById("excluir");
 
@@ -178,7 +187,8 @@ function prepararTela(isbn = "", titulo = "", autor = "", editora = "", anoPubli
     document.getElementById('numPaginas').value = numPaginas;
     document.getElementById('genero').value = genero;
     document.getElementById('dataEntrada').value = dataEntrada;
-
+    const formattedDate = formatISODateToInputDate(dataEntrada);
+    document.getElementById('dataEntrada').value = formattedDate;
     if (acao === 'exclusao') {
         document.getElementById('isbn').disabled = true;
         botaoCadastrar.disabled = true;
