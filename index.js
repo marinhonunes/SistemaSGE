@@ -3,7 +3,7 @@ import session from 'express-session';
 import autenticar from './seguranca/autenticacao.js';
 import rotalogin from './rotas/rotalogin.js';
 import rotaLivro from './Backend/rotas/rotalivro.js';
-//rota projeto
+import rotaProjeto from './Backend/rotas/rotaprojeto.js';
 
 const host = '0.0.0.0';
 
@@ -25,20 +25,21 @@ app.use(session({
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.static('./publico'));
+app.use('/projeto', rotaProjeto);
 app.use('/livros', rotaLivro);
 app.use('/login', rotalogin); 
 app.use(autenticar, express.static('./protegido'));
 
 app.get('/CadastroLivro', (requisicao, resposta) => {
-    res.sendFile(__dirname + '/protegido/CadastroLivro.html'); //livro
+    res.sendFile(__dirname + '/protegido/CadastroLivro.html'); 
   });
 
 app.get('/CadastroProjeto', (requisicao, resposta) => {
-    res.sendFile(__dirname + '/protegido/CadastroProjeto.html'); //projeto
+    res.sendFile(__dirname + '/protegido/CadastroProjeto.html'); 
 });
 
 app.get('/menuSGE', (requisicao, resposta) => {
-    res.sendFile(__dirname + '/protegido/menuSGE.html'); //menu
+    res.sendFile(__dirname + '/protegido/menuSGE.html'); 
 });
 
 app.listen(porta, host, () =>{

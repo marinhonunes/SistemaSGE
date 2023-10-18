@@ -11,4 +11,11 @@ CREATE TABLE livro (
 );
 
 
--- falta tabela do projeto
+CREATE TABLE projeto(
+    nome varchar(255) not null primary key,
+    responsavel varchar(255) not null,
+    dataInicial varchar(255) not null,
+    dataFinal varchar(255) not null,
+    participantes varchar(255) not null,
+    descricao varchar(255) not null
+);

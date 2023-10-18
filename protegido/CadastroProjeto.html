@@ -14,8 +14,7 @@
 <body>
 
     <!-- MENU INICIO -->
-    <header>
-        
+
     <div class="sidebar">
         <div class="logo"></div>
         <ul class="menu">
@@ -50,33 +49,145 @@
         </ul>
     </div>
 
-    </header>
-
-    <!-- MENU FIM -->
+    <!-- MENU INICIO -->
 
     <div class="main--content">
 
-    <!-- TITULO INICIO -->
+        <!-- TITULO INICIO -->
 
-    <div class="header--wrapper">
-        <div class="header--title">
-            <img src="sge.png" alt="Livro" class="header-icon"> 
-            <h2> Sistema de Gerenciamento Escolar - SGE </h2>
+        <div class="header--wrapper">
+            <div class="header--title">
+                <img src="./css/sge.png" alt="Livro" class="header-icon">
+                <h2> Sistema de Gerenciamento Escolar - SGE </h2>
+            </div>
+        </div>
+
+        <!-- TITULO FIM -->
+
+        <!-- FORMULARIO INICIO -->
+
+        <div class="content-section" id="projetos-section">
+            <form method="POST" action="#" id="formulario" name="cadastroProjeto">
+                <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s" style="background-color: #EAF1FB;">
+                    <div class="container py-5">
+
+                        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+                            style="max-width: 600px;">
+                            <h2 class="fw-bold text-uppercase">CADASTRO DE PROJETOS</h2>
+                            <i class="fas fa-book-open fa-2x"></i>
+                            </br></br>
+                            <h3 class="mb-0">Adicione um novo projeto!</h3>
+                        </div>
+
+
+                        <!-- Primeira linha inicio -->
+                        <div class="row">
+
+                            <div class="col">
+                                <label for="nome">
+                                    <strong>Nome do Projeto:</strong>
+                                </label>
+                                <input class="form-control form-control-lg" type="text" name="nome" id="nome"
+                                    placeholder="Digite o nome do Projeto" required="required">
+                                <div class="invalid-feedback">Por favor, informe o nome do Projeto.</div>
+                            </div>
+
+
+                            <div class="col">
+                                <label for="responsavel">
+                                    <strong>Responsável pelo Projeto:</strong>
+                                </label>
+                                <input class="form-control form-control-lg" type="text" name="responsavel"
+                                    id="responsavel" placeholder="Digite o nome do Responsável" required="required">
+                                <div class="invalid-feedback">Por favor, informe o nome do responsável pelo Projeto.
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Primeira linha fim -->
+
+                        <!-- Segunda linha inicio -->
+                        <div class="row mt-3">
+
+                            <div class="col">
+                                <label for="dataInicial">
+                                    <strong>Data de Início:</strong>
+                                </label>
+                                <input class="form-control form-control-lg" type="date" name="dataInicial"
+                                    id="dataInicial" required="required">
+                                <div class="invalid-feedback">Por favor, informe a data de Início do Projeto.</div>
+                            </div>
+
+                            <div class="col">
+                                <label for="dataFinal">
+                                    <strong>Data de Finalização:</strong>
+                                </label>
+                                <input class="form-control form-control-lg" type="date" name="dataFinal" id="dataFinal"
+                                    required="required">
+                                <div class="invalid-feedback">Por favor, informe a data de finalização do Projeto.</div>
+                            </div>
+                        </div>
+                        <!-- Segunda linha fim -->
+
+                        <!-- Terceira linha inicio -->
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="participantes">
+                                    <strong>Nome dos Participantes:</strong>
+                                </label>
+                                <textarea class="form-control form-control-lg" name="participantes" id="participantes"
+                                    placeholder="Digite o nome dos participantes" required="required"></textarea>
+                                <div class="invalid-feedback">Por favor, informe o nome de cada um dos participantes.
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label for="descricao">
+                                    <strong>Descrição do Projeto:</strong>
+                                </label>
+                                <textarea class="form-control form-control-lg" name="descricao" id="descricao"
+                                    placeholder="Digite a descrição do Projeto" required="required"></textarea>
+                                <div class="invalid-feedback">Por favor, informe a descrição do Projeto.</div>
+                            </div>
+
+                        </div>
+                        <!-- Terceira linha fim -->
+
+                        </br></br>
+
+                        <!-- Botões inicio -->
+                        <div class="d-flex justify-content-center">
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" type="reset" onclick="prepararFormulario()">LIMPAR</button>
+                            </div>
+                        
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="cadastrar" type="button">FINALIZAR CADASTRO</button>
+                            </div>
+                        
+                            <div class="mr-4">
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="atualizar" type="button" disabled>ATUALIZAR</button>
+                            </div>
+                        
+                            <div>
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" id="excluir" type="button" disabled>EXCLUIR</button>
+                            </div>
+                        </div>
+                        
+                        <div id="mensagem"></div>
+                        <hr>
+                        <div id="espacoTabela"></div>
+                        
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-    
+    <!-- Scripts do Bootstrap e Popper.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    <h1>TESTE</h1>
-    
-    <!-- TITULO FIM -->
-
-    <!-- SCRIPTS -->
-
-    <script src="./scripts/scripts.js"></script>
+</body>
+<script src="./scripts/scriptsProjetos.js"></script>
+</html>

@@ -10,7 +10,7 @@ function cdmenu(){
     window.location.href = '/menuSGE.html'
 }
 
-const endpoint = "http://localhost:3214/livros"; // Alterar para a URL correta
+const endpoint = "http://localhost:3214/livros"; 
 const botaoCadastrar = document.getElementById('submitButton'); 
 const formulario = document.getElementById('formulario'); 
 
@@ -123,7 +123,7 @@ function mostrarLivros(listaLivros) {
     if (listaLivros.length > 0) {
         elementoDivTabela.innerHTML = '';
         let tabela = document.createElement('table');
-        tabela.className = 'table table-primary table-hover';
+        tabela.className = 'table table-striped table-hover';
         let cabecalhoTabela = document.createElement('thead');
         let corpoTabela = document.createElement('tbody');
         cabecalhoTabela.innerHTML = `<tr>
@@ -151,8 +151,8 @@ function mostrarLivros(listaLivros) {
                                  <td>${livro.numPaginas}</td>
                                  <td>${livro.genero}</td>
                                  <td>${livro.dataEntrada}</td>
-                                 <td><button type="button" class="btn btn-primary" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
-    <button type="button" class="btn btn-primary" onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </td>`;
+                                 <td><button type="button" class="btn btn-warning" id='atualizar' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
+                                 <button type="button" class="btn btn-danger" id='excluir' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </td>`;
             corpoTabela.appendChild(linhaTabela);
         }
         tabela.appendChild(corpoTabela);
