@@ -131,9 +131,9 @@ function mostrarLivros(listaLivros) {
                                         <th>Título</th>
                                         <th>Autor</th>
                                         <th>Editora</th>
-                                        <th>Ano de Publicação</th>
+                                        <th>Publicação</th>
                                         <th>Edição</th>
-                                        <th>Número de Páginas</th>
+                                        <th>Páginas</th>
                                         <th>Gênero</th>
                                         <th>Data de Entrada</th>
                                         <th>Ações</th>
