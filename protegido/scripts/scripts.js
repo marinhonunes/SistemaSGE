@@ -153,8 +153,8 @@ function mostrarLivros(listaLivros) {
                                  <td>${livro.dataEntrada}</td>
                                  <td>
                                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                 <button style="display: inline-block;" type="button" class="btn btn-warning" id='atualizar' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
-                                 <button style="display: inline-block;" type="button" class="btn btn-danger" id='excluir' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </div> </td>`;
+                                 <button style="display: inline-block; margin:3px" type="button" class="btn btn-warning" id='atualizar' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'atualizacao')">Editar</button>
+                                 <button style="display: inline-block; margin:3px" type="button" class="btn btn-danger" id='excluir' onClick="prepararTela('${livro.isbn}', '${livro.titulo}', '${livro.autor}', '${livro.editora}', '${livro.anoPublicacao}', '${livro.edicao}', '${livro.numPaginas}', '${livro.genero}', '${livro.dataEntrada}', 'exclusao')">Excluir</button> </div> </td>`;
             corpoTabela.appendChild(linhaTabela);
         }
         tabela.appendChild(corpoTabela);

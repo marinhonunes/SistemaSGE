@@ -167,7 +167,7 @@ function mostrarProjetos(listaProjetos){
                                      <td>${projeto.participantes}</td>
                                      <td>${projeto.descricao}</td>
                                      <td>
-                                        <button style="display: inline-block;" type="button" class="btn btn-warning" id='atualizar' onClick="prepararFormulario('${projeto.nome}','${projeto.responsavel}','${projeto.dataInicial}','${projeto.dataFinal}','${projeto.participantes}','${projeto.descricao}','atualizacao')">Editar</button>
+                                        <button style="display: inline-block;" type="button" class="btn btn-warning " id='atualizar' onClick="prepararFormulario('${projeto.nome}','${projeto.responsavel}','${projeto.dataInicial}','${projeto.dataFinal}','${projeto.participantes}','${projeto.descricao}','atualizacao')">Editar</button>
                                         <button style="display: inline-block;" type="button" class="btn btn-danger" id='excluir' onClick="prepararFormulario('${projeto.nome}','${projeto.responsavel}','${projeto.dataInicial}','${projeto.dataFinal}','${projeto.participantes}','${projeto.descricao}','exclusao')">Excluir</button>
                                      </td>
                                     `;
