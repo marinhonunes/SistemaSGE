@@ -87,7 +87,7 @@
                                     <label for="isbn">
                                         <strong>ISBN:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="text" id="isbn" placeholder="ISBN" required="required">
+                                    <input class="form-control form-control-lg" type="text" id="isbn" placeholder="ISBN" required="required" onchange="validarisbn(this)">
                                     <div class="invalid-feedback">Por favor, informe o ISBN do livro.</div>
                                 </div>
 
@@ -95,7 +95,7 @@
                                     <label for="titulo">
                                         <strong>Título do Livro:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="text" id="titulo" placeholder="Título do Livro" required="required">
+                                    <input class="form-control form-control-lg" type="text" id="titulo" placeholder="Título do Livro" required="required" onchange="validarTitulo(this)">
                                     <div class="invalid-feedback">Por favor, informe o título do livro.</div>
                                 </div>
 
@@ -103,7 +103,7 @@
                                     <label for="autor">
                                         <strong>Autor(es):</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="text" id="autor" placeholder="Autor(es)" required="required">
+                                    <input class="form-control form-control-lg" type="text" id="autor" placeholder="Autor(es)" required="required" onchange="validarAutor(this)">
                                     <div class="invalid-feedback">Por favor, informe o autor ou autores do livro.</div>
                                 </div>
 
@@ -117,7 +117,7 @@
                                     <label for="editora">
                                         <strong>Editora:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="text" id="editora" placeholder="Editora" required="required">
+                                    <input class="form-control form-control-lg" type="text" id="editora" placeholder="Editora" required="required" onchange="validarEditora(this)">
                                     <div class="invalid-feedback">Por favor, informe a editora do livro.</div>
                                 </div>
 
@@ -125,7 +125,7 @@
                                     <label for="anoPublicacao">
                                         <strong>Ano de Publicação:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="text" id="anoPublicacao" placeholder="Ano de Publicação" required="required">
+                                    <input class="form-control form-control-lg" type="text" id="anoPublicacao" placeholder="Ano de Publicação" required="required" onchange="validarAnoPublicacao(this)">
                                     <div class="invalid-feedback">Por favor, informe o ano de publicação do livro.</div>
                                 </div>
 
@@ -133,7 +133,7 @@
                                     <label for="edicao">
                                         <strong>Edição:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="number" id="edicao" placeholder="Edição" required="required">
+                                    <input class="form-control form-control-lg" type="number" id="edicao" placeholder="Edição" required="required" onchange="validarEdicao(this)">
                                     <div class="invalid-feedback">Por favor, informe a edição do livro.</div>
                                 </div>
 
@@ -147,7 +147,7 @@
                                     <label for="numPaginas">
                                         <strong>Número de Páginas:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="number" id="numPaginas" placeholder="Número de Páginas" required="required">
+                                    <input class="form-control form-control-lg" type="number" id="numPaginas" placeholder="Número de Páginas" required="required" onchange="validarNumPaginas(this)">
                                     <div class="invalid-feedback">Por favor, informe o número de páginas do livro.</div>
                                 </div>
 
@@ -155,12 +155,12 @@
                                     <label for="genero">
                                         <strong>Gênero:</strong>
                                     </label>
-                                    <select class="form-control form-control-lg bg-white" id="genero" required="required">
+                                    <select class="form-control form-control-lg bg-white" id="genero" required="required" onchange="validarSelecao(this)">
                                         <option value="" selected disabled>Selecione o Gênero Literário</option>
                                         <option value="romance">Romance</option>
                                         <option value="ficcao">Ficção Científica</option>
-                                        <option value="historia">História</option>
-                                        <option value="biografia">Biografia</option>
+                                        <option value="fantasia">Fantasia</option>
+                                        <option value="aventura">Aventura</option>
                                         <!-- Adicione mais opções conforme necessário -->
                                     </select>
                                     <div class="invalid-feedback">Por favor, selecione o gênero do livro.</div>
@@ -222,6 +222,9 @@
     
     <!-- SCRIPTS -->
     <script src="./scripts/scripts.js"></script>
+
+    <!-- JavaScript -->
+    <script src="validacao_livro.js"></script>
 
 </body>
 
