@@ -33,6 +33,7 @@ function limparFormulario(){
     document.getElementById('dataFinal').value = '';
     document.getElementById('participantes').value = '';
     document.getElementById('descricao').value = '';
+    formulario.classList.remove('was-validated');
 }
 
 botaoCadastrar.onclick = () => {
@@ -128,6 +129,7 @@ function cadastrarProjetos(projeto){
         if(respostaBackend.status){
             mostrarMensagem(respostaBackend.mensagem, 'success');
             obterProjetos();
+            limparFormulario();
         }
         else{
             mostrarMensagem(respostaBackend.mensagem, 'danger');

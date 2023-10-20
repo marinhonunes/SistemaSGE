@@ -45,7 +45,6 @@ botaoCadastrar.onclick = () => {
     if (formulario.checkValidity()) {
         const livro = obterLivroFormulario();
         cadastrarLivro(livro);
-        limparFormulario();
     } else {
         formulario.classList.add('was-validated');
     }
@@ -109,6 +108,8 @@ function cadastrarLivro(livro) {
                 mostrarMensagem(respostaBackEnd.mensagem, 'success');
                 prepararTela();
                 obterLivros();
+                limparFormulario();
+                formulario.classList.remove('was-validated')
             } else {
                 mostrarMensagem(respostaBackEnd.mensagem, 'danger');
             }

@@ -1,44 +1,65 @@
 
-//Validação Formulário
+
+// Limpar Formulário 
+function limparFormulario() {
+  var inputs = document.querySelectorAll("#formulario input, #formulario select");
+  for (var i = 0; i < inputs.length; i++) {
+      inputs[i].style.borderColor = "";
+      inputs[i].style.borderWidth = "";
+      inputs[i].value = "";
+  }
+  var selects = document.querySelectorAll("#formulario select");
+  for (var i = 0; i < selects.length; i++) {
+      selects[i].style.borderColor = "";
+      selects[i].style.borderWidth = "";
+      selects[i].selectedIndex = 0;
+  }
+}
+
+// Validar Formulario
 function validarFormulario() {
-    var inputs = document.querySelectorAll("#formulario input, #formulario select");
-    var isValid = true;
-  
-    for (var i = 0; i < inputs.length; i++) {
+  var inputs = document.querySelectorAll("#formulario input, #formulario select");
+  var isValid = true;
+
+  for (var i = 0; i < inputs.length; i++) {
       if (!inputs[i].checkValidity()) {
-        isValid = false;
-        inputs[i].reportValidity();
-        break;
+          isValid = false;
+          inputs[i].reportValidity();
+          break;
       }
-    }
   }
 
+  if (isValid) {
+      limparFormulario();
+  }
+}
+  
 //Validar ISBN
 function validarisbn(input) {
-    var isbn = input.value.trim();
-    var isValido = true;
-    input.style.borderColor = "";
-  
-    if (isbn === "") {
-      input.style.borderColor = "red";
-      input.style.borderWidth = "2px";
-      alert("ISBN inválido. Digite novamente.");
-      input.value = "";
-      isValido = false;
-    } else if (!/^\d{13}$/.test(isbn)) {
-      input.style.borderColor = "red";
-      input.style.borderWidth = "2px";
-      alert("ISBN inválido. Digite exatamente 13 números.");
-      input.value = "";
-      isValido = false;
-    } else {
-      input.style.borderColor = "#8AC78A";
-      input.style.borderWidth = "2px";
-    }
-  
-    return isValido;
+  var isbn = input.value.trim();
+  var isValido = true;
+  input.style.borderColor = "";
+
+  if (isbn === "") {
+    input.style.borderColor = "red";
+    input.style.borderWidth = "2px";
+    alert("ISBN inválido. Digite novamente.");
+    input.value = "";
+    isValido = false;
+  } else if (!/^\d{13}$/.test(isbn)) {
+    input.style.borderColor = "red";
+    input.style.borderWidth = "2px";
+    alert("ISBN inválido. Digite exatamente 13 números.");
+    input.value = "";
+    isValido = false;
+  } else {
+    input.style.borderColor = "#8AC78A";
+    input.style.borderWidth = "2px";
   }
-  
+
+  return isValido;
+}
+
 // Validação Título
 function validarTitulo(input) {
     var titulo = input.value.trim();
@@ -191,3 +212,30 @@ function validarNumPaginas(input) {
     }
   }
   
+  //Validar Data
+  function validarData(input) {
+    var data = input.value.trim();
+    var isValido = true;
+    input.style.borderColor = "";
+
+    var regexData = /^\d{4}-\d{2}-\d{2}$/;
+
+    if (data === "") {
+        input.style.borderColor = "red";
+        input.style.borderWidth = "2px";
+        alert("Data inválida. Digite novamente.");
+        input.value = "";
+        isValido = false;
+    } else if (!regexData.test(data)) {
+        input.style.borderColor = "red";
+        input.style.borderWidth = "2px";
+        alert("Data inválida. Digite no formato AAAA-MM-DD.");
+        input.value = "";
+        isValido = false;
+    } else {
+        input.style.borderColor = "#8AC78A";
+        input.style.borderWidth = "2px";
+    }
+
+    return isValido;
+}

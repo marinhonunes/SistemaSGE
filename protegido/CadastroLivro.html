@@ -20,7 +20,7 @@
         <div class="logo"></div>
         <ul class="menu">
 
-            <li class="active">
+            <li>
                 <a onclick="cdmenu()">
                     <i class="fas fa-plus-circle"></i>
                     <span>Cadastros</span>
@@ -34,7 +34,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a onclick="cdlivro()">
                     <i class="fas fa-book"></i>
                     <span>Livros</span>
@@ -170,7 +170,7 @@
                                     <label for="dataEntrada">
                                         <strong>Data de Entrada:</strong>
                                     </label>
-                                    <input class="form-control form-control-lg" type="date" id="dataEntrada" required="required">
+                                    <input class="form-control form-control-lg" type="date" id="dataEntrada" required="required"  onchange="validarData(this)">
                                     <div class="invalid-feedback">Por favor, informe a data de entrada do livro na biblioteca.</div>
                                 </div>
 
@@ -183,7 +183,7 @@
                         <div class="d-flex justify-content-center">
 
                             <div class="mr-4">
-                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" type="reset" onclick="prepararTela()">LIMPAR</button>
+                                <button class="btn btn-primary py-md-3 px-md-5 btn-gradient" type="reset" onclick="prepararTela(),limparFormulario()">LIMPAR</button>
                             </div>
 
                             <div class="mr-4">
